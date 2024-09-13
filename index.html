@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <form onsubmit="return false">
+            <h1>Check Your Result</h1>
+            <label for="totalMath">Total marks in Math</label>
+            <input type="number" value="100" id="totalMath" ><br>
+            <label for="obtainedMath"> Obtained marks in Math</label>
+            <input type="number" id="obtainedMath" ><br>
+            <label for="totalPhysics">Total marks in Physics</label>
+            <input type="number" value="100" id="totalPhysics"><br>
+            <label for="obtainedPhysics">Obtained marks in Physics</label>
+            <input type="number" id="obtainedPhysics"><br>
+            <label for="totalChemistry">Total marks in Chemistry</label>
+            <input type="number" value="100" id="totalChemistry"><br>
+            <label for="obtainedChemistry">Obtained marks in Chemistry</label>
+            <input type="number" id="obtainedChemistry"><br>
+            <button onclick="perSubmit()"> Check you Result</button>
+        </form>
+    </div>
+
+            <script>
+     
+
+
+
+
+
+        
+                function perSubmit(){
+                    let fixedMath = document.querySelector("#totalMath").value;
+                    let fixedPhysics = document.querySelector("#totalPhysics").value;
+                    let fixedChemistry = document.querySelector("#totalChemistry").value;
+        
+                    let smallMath = document.querySelector("#obtainedMath").value;
+                    let smallPhysics = document.querySelector("#obtainedPhysics").value;
+                    let smallChemistry = document.querySelector("#obtainedChemistry").value;
+                    
+                    
+                    if (( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 ) >= 80)  {
+                        alert("you are passed" + " A+ Grade");
+                        alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+                    }
+                     else if (( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 ) >= 70 )  {
+                        alert("you are passed" + " A Grade");
+                        alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+                    }
+                     else if (( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 ) >=60 ) {
+                        alert("you are passed" + " B Grade");
+                        alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+                }
+                else if (( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 ) >=50 ) {
+                    alert("you are passed" + " C Grade");
+                    alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+                }
+                else if (( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 ) >= 40 ) {
+                    alert("you are passed" + " D Grade");
+                    alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+                }
+                else if (( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 ) >= 33 ){
+                    alert("you are Passed" + " E Grade");
+                    alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+        
+                }
+           
+                
+                     else {
+                        alert("you are failed" );
+                        alert ( ( ( Number(smallMath) + Number(smallPhysics) + Number(smallChemistry) ) / ( Number(fixedMath) + Number(fixedPhysics) + Number(fixedChemistry) ) )*100 + "%" );
+                    }
+                    
+                }
+                
+            </script>
+  
+</body>
+</html>
